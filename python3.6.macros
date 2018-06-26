@@ -1,0 +1,11 @@
+%__python36 /usr/bin/python3.6
+%python36_sitelib %(%{__python36} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
+%python36_sitearch %(%{__python36} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")
+%py36ver %(%{__python36} -V 2>&1 | cut -f2 -d" " | cut -f1,2 -d".")
+%python36_version %(%{__python36} -c "import sys; print(sys.version[0:3])")
+%py36_ver %(%{__python36} -c "import sys; v=sys.version_info[:2]; print('%%d.%%d'%%v)" 2>/dev/null || echo PYTHON-NOT-FOUND)
+%py36_prefix %(%{__python36} -c "import sys; print(sys.prefix)" 2>/dev/null || echo PYTHON-NOT-FOUND)
+%py36_platsitedir %python36_sitearch
+%py36_puresitedir %python36_sitelib
+%py36_incdir %(%{__python36} -c 'from distutils.sysconfig import get_python_inc; print(get_python_inc())' 2>/dev/null || echo PYTHON-INCLUDEDIR-NOT-FOUND)
+%py36dir %{_builddir}/python36-%{name}-%{version}-%{release}
