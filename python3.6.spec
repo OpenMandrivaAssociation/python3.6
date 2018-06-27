@@ -12,6 +12,9 @@
 %bcond_with valgrind
 %endif
 
+%define __python_provides %{nil}
+%define __python_requires %{nil}
+
 # weird stuff
 # pip not available if python package built with pip
 # * build without pip files lead to good package
