@@ -1,6 +1,8 @@
 %define docver 3.6.5
 %define dirver 3.6
 
+%define _disable_lto 1
+
 %define api %{dirver}
 %define major 1
 %define libname %mklibname python %{api}m %{major}
@@ -250,7 +252,6 @@ autoreconf -vfi
 		--with-pymalloc \
 		--enable-ipv6=yes \
 		--with-system-expat \
-		--with-lto=8 \
 		--with-computed-gotos \
 %if %{with valgrind}
 		--with-valgrind
