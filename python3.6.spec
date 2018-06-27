@@ -28,7 +28,7 @@
 Summary:	An interpreted, interactive object-oriented programming language
 Name:		python3.6
 Version:	3.6.5
-Release:	1
+Release:	2
 License:	Modified CNRI Open Source License
 Group:		Development/Python
 Url:		http://www.python.org/
