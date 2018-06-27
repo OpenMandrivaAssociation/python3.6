@@ -351,8 +351,6 @@ find %{buildroot} -name "*~" -exec rm -f {} \;
 mkdir -p %{buildroot}%{_sysconfdir}/rpm/macros.d
 install -m644 %{SOURCE2} %{buildroot}%{_sysconfdir}/rpm/macros.d/
 install -m644 %{SOURCE3} %{buildroot}/%{_sysconfdir}/rpm/macros.d/
-# We are the default version...
-sed -e 's,python3,python,g;s,py3,py,g' %{SOURCE2} >%{buildroot}%{_sysconfdir}/rpm/macros.d/python3.6.macros
 
 # Fix permissions on docs
 find html -type d |xargs chmod 0755
