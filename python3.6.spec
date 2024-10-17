@@ -29,7 +29,7 @@ Version:	3.6.5
 Release:	1
 License:	Modified CNRI Open Source License
 Group:		Development/Python
-Url:		http://www.python.org/
+Url:		https://www.python.org/
 Source0:	http://www.python.org/ftp/python/%{version}/Python-%{version}.tar.xz
 Source1:	http://www.python.org/ftp/python/doc/%{docver}/python-%{docver}-docs-html.tar.bz2
 Source2:	python3.6.macros
