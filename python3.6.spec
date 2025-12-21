@@ -53,6 +53,11 @@ Patch181:	http://pkgs.fedoraproject.org/cgit/rpms/python3.git/plain/00157-uid-gi
 Patch183:	00178-dont-duplicate-flags-in-sysconfig.patch
 Patch184:	00201-fix-memory-leak-in-gdbm.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	blt
 BuildRequires:	bzip2-devel
 BuildRequires:	db-devel
